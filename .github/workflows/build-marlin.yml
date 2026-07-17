@@ -1,9 +1,11 @@
 name: Build Custom Marlin 2.1.x E3V3SE Firmware 
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
 
 on:
   workflow_dispatch:
+  
+  env:
+    ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+
     inputs:
       env:
         description: "PlatformIO environment to compile"
@@ -91,7 +93,8 @@ on:
         required: true
         type: boolean
         default: true
-
+env:
+    ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 jobs:
   build:
     runs-on: ubuntu-latest
