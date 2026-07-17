@@ -2,9 +2,6 @@ name: Build Custom Marlin 2.1.x E3V3SE Firmware
 
 on:
   workflow_dispatch:
-  
-  env:
-    ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
     inputs:
       env:
