@@ -1,4 +1,6 @@
 name: Build Custom Marlin 2.1.x E3V3SE Firmware 
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
 
 on:
   workflow_dispatch:
@@ -10,6 +12,7 @@ on:
         default: "STM32F103RET6_creality"
         options:
           - STM32F103RET6_creality
+        
 
       x_routine_auto_offset:
         description: "X_ROUTINE_AUTO_OFFSET (Z offset with X pattern)"
